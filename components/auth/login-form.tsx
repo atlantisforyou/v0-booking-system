@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useAuth } from '@/lib/auth-context'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
@@ -34,8 +35,14 @@ export function LoginForm({ onSwitchPage }: LoginFormProps) {
     <Card className="border border-border/40 shadow-elegant-lg backdrop-blur-sm">
       <CardHeader className="relative bg-gradient-to-br from-primary via-primary/80 to-primary/60 text-primary-foreground pb-8 pt-8 px-8 rounded-t-[0.75rem]">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-14 h-14 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl flex items-center justify-center transition-elegant hover:scale-110">
-            <span className="text-primary text-2xl">✓</span>
+          <div className="w-16 h-16 relative">
+            <Image
+              src="/siperu-logo.png"
+              alt="SIPERU Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-2 tracking-tight">Welcome Back</h2>
